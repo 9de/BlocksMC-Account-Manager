@@ -1,0 +1,21 @@
+[
+  {
+    "modid": "bmcaccountmanager",
+    "name": "BlocksMC Account Manager",
+    "description": "An account manager for BlocksMC",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": ["Tvrki"],
+    "credits": "minotar.net (for providing head skin images)",
+    "logoFile": "images/logo.png",
+    "screenshots": [
+      "images/Screenshot_8.png",
+      "images/Screenshot_9.png",
+      "images/Screenshot_11.png",
+      "images/Screenshot_12.png"
+    ],
+    "dependencies": []
+  }
+]
