@@ -25,6 +25,7 @@ import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.Map;
 import java.util.Optional;
+import java.util.regex.Pattern;
 
 @Mod(modid = "bmcaccountmanager", version = "1.0", clientSideOnly = true)
 public class AccountManager {
@@ -69,7 +70,8 @@ public class AccountManager {
         if (mc.getCurrentServerData() == null || !autoLoginEnabled) return;
         
         String serverAddress = mc.getCurrentServerData().serverIP.toLowerCase();
-        if (serverAddress.contains("blocksmc.com") || serverAddress.contains("play.blocksmc.com") || serverAddress.contains("ccc.blocksmc.com")) {
+        Pattern pattern = Pattern.compile("^(?:[a-z0-9-]+\\.)?blocksmc\\.com$");
+        if (pattern.matcher(serverAddress).matches()) {
             new Thread(() -> {
                 try {
                     // Wait for connection to stabilize
